@@ -5,7 +5,7 @@ from cachetools import TTLCache
 from telegram import Chat, ChatMember, ParseMode, Update
 from telegram.ext import CallbackContext
 
-from EmmaMiller import (
+from smartbot import (
     DEL_CMDS,
     DEMONS,
     DEV_USERS,
