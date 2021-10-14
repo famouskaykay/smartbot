@@ -71,7 +71,7 @@ My name is [smartbot](https://t.me/xkaykaybotbot) ✨
 I can manage your  group with lots of useful features, feel free to add me to your group.
 ✨ Pọwẹrẹɗ Ɓy : @famouskaykay3
 ✮───────────────✮
-🌟 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 : [Mukesh Solanki](https://t.me/famouskaykay3)
+🌟 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 : [kaykay](https://t.me/famouskaykay3)
 ✮───────────────✮
 """
 
