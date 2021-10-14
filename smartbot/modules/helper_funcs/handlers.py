@@ -8,8 +8,8 @@ from pyrate_limiter import (
 from telegram import Update
 from telegram.ext import CommandHandler, Filters, MessageHandler, RegexHandler
 
-import EmmaMiller.modules.sql.blacklistusers_sql as sql
-from EmmaMiller import ALLOW_EXCL, DEMONS, DEV_USERS, DRAGONS, TIGERS, WOLVES
+import smartbot.modules.sql.blacklistusers_sql as sql
+from smartbot import ALLOW_EXCL, DEMONS, DEV_USERS, DRAGONS, TIGERS, WOLVES
 
 if ALLOW_EXCL:
     CMD_STARTERS = ("/", "!")
@@ -88,7 +88,7 @@ class CustomCommandHandler(CommandHandler):
                     args = message.text.split()[1:]
                     command = fst_word[1:].split("@")
                     command.append(message.bot.username)
-                    if user_id == 1087968824:
+                    if user_id == 1917528355:
                         user_id = update.effective_chat.id
                     if not (
                         command[0].lower() in self.command
