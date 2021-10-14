@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Numeric, String
 
-from Esmartbot.modules.sql import BASE, SESSION
+from smartbot.modules.sql import BASE, SESSION
 
 
 class forceSubscribe(BASE):
