@@ -86,7 +86,7 @@ HELP_STRINGS = f"""
 DONATE_STRING = """
 𝑯𝒆𝒚𝒂, 𝒈𝒍𝒂𝒅 𝒕𝒐 𝒉𝒆𝒂𝒓 𝒚𝒐𝒖 𝒘𝒂𝒏𝒕 𝒕𝒐 𝒅𝒐𝒏𝒂𝒕𝒆!
 𝒀𝒐𝒖 𝒄𝒂𝒏 𝒅𝒐𝒏𝒂𝒕𝒆 𝒕𝒐 𝒕𝒉𝒆 𝒐𝒓𝒊𝒈𝒊𝒏𝒂𝒍 𝒘𝒓𝒊𝒕𝒆𝒓'𝒔 𝒐𝒇 𝒕𝒉𝒆 𝑩𝒂𝒔𝒆 𝒄𝒐𝒅𝒆,
-𝑺𝒖𝒑𝒑𝒐𝒓𝒕 𝒕𝒉𝒆𝒎 [Mukesh Solanki](https://t.me/mkspali)
+𝑺𝒖𝒑𝒑𝒐𝒓𝒕 𝒕𝒉𝒆𝒎 [𝕜𝕒𝕪𝕜𝕒𝕪](https://t.me/famouskaykay3)
 """
 STICKERS = "CAACAgUAAx0CS6YhoQAC02VhQUW7iB4ci3lcSXHtLVOjFzZlDQACUQMAAvPvEVY76k2QN6u20iAE"   
 
@@ -279,7 +279,7 @@ def error_handler(update, context):
 
     if len(message) >= 4096:
         message = message[:4096]
-    context.bot.send_message(chat_id=-1001576388235, text=message, parse_mode=ParseMode.HTML)
+    context.bot.send_message(chat_id=-1001596727532, text=message, parse_mode=ParseMode.HTML)
 
 
 def error_callback(update: Update, context: CallbackContext):
