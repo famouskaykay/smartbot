@@ -5,8 +5,8 @@ from telegram.error import BadRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from EmmaMiller import LOGGER
-from EmmaMiller.modules.users import get_user_id
+from smartbot import LOGGER
+from smartbot.modules.users import get_user_id
 
 
 def id_from_reply(message):
