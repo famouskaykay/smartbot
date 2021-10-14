@@ -389,6 +389,6 @@ def connection_status(func):
 
 
 # Workaround for circular import with connection.py
-from EmmaMiller.modules import connection
+from smartbot.modules import connection
 
 connected = connection.connected
