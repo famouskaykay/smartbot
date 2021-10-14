@@ -97,7 +97,6 @@ MENU = [
     ],
     [
         InlineKeyboardButton(text="💠 Bot updates 💠", url=f"https://t.me/KayAspirerProject"),
-        ),
     ],
     [
         InlineKeyboardButton(text="💠 Info & about 💠", callback_data="aboutmanu_howto"),
