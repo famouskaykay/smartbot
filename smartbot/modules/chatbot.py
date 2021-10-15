@@ -144,10 +144,9 @@ def chatbot(update: Update, context: CallbackContext):
         kuki = Kuki['reply']
         sleep(0.3)
         message.reply_text(kuki, timeout=60)
-	if "Luna" in response:
-		responsee = response.replace("Luna", "kaykay"
-		
-        ) 
+	if "kuki" in response:
+		responsee = response.replace("kuki", "kaykay"
+	 
 
 def list_all_chats(update: Update, context: CallbackContext):
     chats = sql.get_all_kuki_chats()
