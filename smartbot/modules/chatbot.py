@@ -72,7 +72,7 @@ def rem_chat(update: Update, context: CallbackContext):
     user = update.effective_user
     is_kuki = sql.is_kuki(chat.id)
     if not is_kuki:
-        msg.reply_text("Cutiepii AI isn't enabled here in the first place!")
+        msg.reply_text("xkaykay AI isn't enabled here in the first place!")
         return ""
     sql.rem_kuki(chat.id)
     msg.reply_text("xkaykay AI disabled successfully!")
