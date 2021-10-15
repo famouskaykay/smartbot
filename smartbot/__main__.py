@@ -68,15 +68,15 @@ from smartbot.modules.system_stats import bot_sys_stats
 TEXT = """
 Hey there! [👋](https://telegra.ph/file/d6779c1d323ab50769179.mp4)  
 My name is [smartbot](https://t.me/xkaykaybotbot) ✨
-I can manage your  group with lots of useful features, feel free to add me to your group.
-✨ Pọwẹrẹɗ Ɓy : @famouskaykay3
-✮───────────────✮
-🌟 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 : [kaykay](https://t.me/famouskaykay3)
-✮───────────────✮
+I can manage your group with lots of useful features, feel free to 
+add me to your group.
+
+  𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 : [kaykay](https://t.me/famouskaykay3)
+
 """
 
 HELP_STRINGS = f"""
-𝑻𝒉𝒆 𝒇𝒐𝒍𝒍𝒐𝒘𝒊𝒏𝒈 𝒇𝒖𝒏𝒄𝒕𝒊𝒐𝒏𝒔 𝒘𝒊𝒍𝒍 𝒉𝒆𝒍𝒑𝒇𝒖𝒍 𝒕𝒐 𝒚𝒐𝒖 𝒕𝒐 𝒎𝒂𝒏𝒂𝒈𝒆 𝒚𝒐𝒖𝒓 𝒈𝒓𝒐𝒖𝒑🙂
+𝑻𝒉𝒆 𝒇𝒐𝒍𝒍𝒐𝒘𝒊𝒏𝒈 𝒇𝒖𝒏𝒄𝒕𝒊𝒐𝒏𝒔 𝒘𝒊𝒍𝒍 𝒉𝒆𝒍𝒑𝒇𝒖𝒍 𝒕𝒐 𝒚𝒐𝒖 𝒕𝒐 𝒎𝒂𝒏𝒂𝒈𝒆 𝒚𝒐𝒖𝒓 𝒈𝒓𝒐𝒖𝒑�
 """.format(
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
@@ -96,7 +96,7 @@ MENU = [
             text="➕️ 𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 ➕️", url="http://t.me/xkaykaybot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="💠 Bot updates 💠", url=f"https://t.me/KayAspirerProject"),
+        InlineKeyboardButton(text=" Bot updates 💠", url=f"https://t.me/KayAspirerProject"),
     ],
     [
         InlineKeyboardButton(text="💠 Info & about 💠", callback_data="aboutmanu_howto"),
@@ -115,11 +115,7 @@ Click `Main menu` button for more information.
 *Main* available commands:
  - /start: Start the bot...
  - /help: help....
- - /donate: To find out more about donating!
- - /repo: To find out the repo of this bot!
-    Note:- Fork the repo, Give Star to repo then deploy with your variables!
-Click here for all commands --> /help
-Join my [news channel](https://t.me/KayAspirerProject) to get information on all the latest updates.  """
+ """
 
 BUTTONS = [
     [
@@ -316,7 +312,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "*｢｢  𝗛𝗲𝗹𝗽  𝗳𝗼𝗿  {}  𝗺𝗼𝗱𝘂𝗹𝗲 」」😊*\𝗻".format(
+                "*｢｢  help for {}  𝗺𝗼𝗱𝘂𝗹𝗲 」」😊*\𝗻".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -374,7 +370,7 @@ def help_button(update, context):
            
     
 @run_async
-def EmmaMiller_about_callback(update, context):
+def tay_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
@@ -432,7 +428,6 @@ def EmmaMiller_about_callback(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="💠 Sᴜᴘᴘᴏʀᴛ 💠", callback_data="aboutmanu_spamprot"),
-                    InlineKeyboardButton(text="💠 Cʀᴇᴅɪᴛ 💠", callback_data="aboutmanu_tac"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="aboutmanu_back"),
@@ -493,10 +488,8 @@ def EmmaMiller_about_callback(update, context):
         )
     elif query.data == "aboutmanu_tac":
         query.message.edit_text(
-            text=f"* CREDITS  FOR @EmmaMillerBot DEV *\n"
-            f"\n Here you can find information about the bots I coded and the people who helped me create Emma Miller"
-            f"\n Special credits [BotMasterOfficial](https://github.com/BotMasterOfficial/EmmaMiller)  & [Mukesh Solanki](https://t.me/mkspali)"
-            f"\n Finally my special thanks to you for using this bot",
+            text=f"*Xkaykay  *\n"
+            f"\n my special thanks to you for using this bot",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -509,10 +502,6 @@ def EmmaMiller_about_callback(update, context):
                     InlineKeyboardButton(text="💠 Group 💠", url="https://t.me/KayAspirerProject"),
                     InlineKeyboardButton(text="💠 Channel 💠", url="https://t.me/xprograming"),
                  ],
-                 [
-                    InlineKeyboardButton(text="💠 Support Group 💠", url="https://t.me/KayAspirerProject"),
-                    InlineKeyboardButton(text="💠 any questions 💠", url="https://t.me/KayAspirerProject"),
-                 ],   
                  [
                     InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto"),
                  
