@@ -1,9 +1,31 @@
+# Copyright (C) 2021 MoeZilla
+
+# This file is part of Kuki (Telegram Bot)
+
+# Follow My Github Id https://github.com/MoeZilla/
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+
 import json
 import re
 import os
 import html
 import requests
-import smartbot.modules.sql.chatbot_sql as sql
+import MoeZillaBot.modules.sql.kuki_sql as sql
 
 from time import sleep
 from telegram import ParseMode
@@ -144,20 +166,20 @@ Chatbot utilizes the Kuki's api which allows Kuki to talk and provide a more int
   ➢ `/Chatbot`*:* Shows chatbot control panel
   
  Reports bugs at Kuki-api.tk
-*Powered by Lovely* (https://github/itelai) from @KukiUpdates
+*Powered by ItelAi* (https://github/itelai) from @KukiUpdates
 """
 
-__mod_name__ = "Cʜᴀᴛʙᴏᴛ💬"
+__mod_name__ = "ChatBot"
 
 
-CHATBOTK_HANDLER = CommandHandler("chatbot", kuki)
-ADD_CHAT_HANDLER = CallbackQueryHandler(kukiadd, pattern=r"add_chat")
-RM_CHAT_HANDLER = CallbackQueryHandler(kukirm, pattern=r"rm_chat")
+CHATBOTK_HANDLER = CommandHandler("chatbot", kuki, run_async=True)
+ADD_CHAT_HANDLER = CallbackQueryHandler(kukiadd, pattern=r"add_chat", run_async=True)
+RM_CHAT_HANDLER = CallbackQueryHandler(kukirm, pattern=r"rm_chat", run_async=True)
 CHATBOT_HANDLER = MessageHandler(
     Filters.text & (~Filters.regex(r"^#[^\s]+") & ~Filters.regex(r"^!")
-                    & ~Filters.regex(r"^\/")), chatbot)
+                    & ~Filters.regex(r"^\/")), chatbot, run_async=True)
 LIST_ALL_CHATS_HANDLER = CommandHandler(
-    "allchats", list_all_chats, filters=CustomFilters.dev_filter)
+    "allchats", list_all_chats, filters=CustomFilters.dev_filter, run_async=True)
 
 dispatcher.add_handler(ADD_CHAT_HANDLER)
 dispatcher.add_handler(CHATBOTK_HANDLER)
