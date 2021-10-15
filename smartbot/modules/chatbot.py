@@ -145,7 +145,7 @@ def chatbot(update: Update, context: CallbackContext):
         sleep(0.3)
         message.reply_text(kuki, timeout=60)
 	if "kuki" in response:
-		responsee = response.replace("kuki", "kaykay"
+            responsee = response.replace("kuki", "kaykay")
 	 
 
 def list_all_chats(update: Update, context: CallbackContext):
