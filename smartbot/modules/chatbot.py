@@ -46,6 +46,7 @@ from smartbot.modules.helper_funcs.chat_status import user_admin, user_admin_no_
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
  
+	
 @user_admin_no_reply
 @gloggable
 def kukirm(update: Update, context: CallbackContext) -> str:
@@ -166,13 +167,13 @@ Chatbot utilizes the Kuki's api which allows Kuki to talk and provide a more int
   ➢ `/Chatbot`*:* Shows chatbot control panel
   
  Reports bugs at Kuki-api.tk
-*Powered by ItelAi* (https://github/itelai) from @KukiUpdates
+*Powered by Lovely* (https://github/itelai) from @KukiUpdates
 """
 
-__mod_name__ = "ChatBot"
+__mod_name__ = "Cʜᴀᴛʙᴏᴛ💬"
 
 
-CHATBOTK_HANDLER = CommandHandler("chatbot", kuki, run_async=True)
+CHATBOTK_HANDLER = CommandHandler("chatbot", kuki)
 ADD_CHAT_HANDLER = CallbackQueryHandler(kukiadd, pattern=r"add_chat")
 RM_CHAT_HANDLER = CallbackQueryHandler(kukirm, pattern=r"rm_chat")
 CHATBOT_HANDLER = MessageHandler(
