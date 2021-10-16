@@ -36,7 +36,7 @@ def __list_all_modules():
         return to_load
 
     return all_modules
-
+help_message = []
 
 ALL_MODULES = __list_all_modules()
 LOGGER.info("Modules to load: %s", str(ALL_MODULES))
