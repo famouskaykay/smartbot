@@ -5,6 +5,7 @@ from youtubesearchpython import VideosSearch
 from pytube import YouTube
 
 SESSION = os.environ.get("SESSION")
+ADMINS = os.environ.get("ADMINS")
 
 def str_to_int(input):
     if type(input) == list:
