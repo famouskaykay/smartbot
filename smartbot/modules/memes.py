@@ -3,7 +3,7 @@ from pyrogram.types.bots_and_keyboards.inline_keyboard_markup import InlineKeybo
 from smartbot import pbot
 from pyrogram import filters
 import requests
-from helpers import call_back_in_filter
+from helpers.filters import call_back_in_filter
 
 
 @pbot.on_callback_query(call_back_in_filter('meme'))
