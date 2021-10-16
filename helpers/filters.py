@@ -4,7 +4,7 @@ from pyrogram import filters
 
 from os import name
 from pyrogram.methods import messages
-from smartbot import pbot , help_message
+from smartbot import pbot
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton , InlineKeyboardMarkup
 
