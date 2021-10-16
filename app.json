@@ -54,7 +54,15 @@
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
          "value": ""
-      },    
+      },
+      "SESSION": {
+        "description": "Get Pyrogram string session from https://replit.com/@AnjanaMadu/GenerateStringSession",
+        "required": true
+      }, 
+      "ADMINS": {
+        "description": "Your telegram ID. If 2 or more, Seperate by space.",
+        "required": true
+      },
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
          "required": false,
