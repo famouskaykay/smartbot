@@ -35,6 +35,11 @@
          "required": true,
          "value": ""
       },      
+      "REDIS_URL": {
+         "description": "REDIS_URL",
+         "required": true,
+         "value": ""
+      },           
       "BOT_ID": {
          "description": "BOT_ID",
          "required": true,
