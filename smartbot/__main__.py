@@ -225,7 +225,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code> Join @LOVELYAPPEAL for help".format(
+            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code> Join [support](https://t.me/KayAspirerProject) for help".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -394,8 +394,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *lovely*
-                 \nHere is the [Source Code](https://t.me/LOVELYAPPEL) .""",
+            text=""" Hi..🤗 I'm *xaykay
+                 \nHere is the [Source Code](https://t.me/famouskaykay3) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
