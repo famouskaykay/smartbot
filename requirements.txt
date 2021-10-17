@@ -7,8 +7,6 @@ lxml
 requests
 aiohttp[speedups]
 bs4
-
-dnspython
 speedtest-cli
 
 beautifulsoup4
