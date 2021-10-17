@@ -209,8 +209,10 @@ from smartbot.modules.helper_funcs.handlers import (
     CustomMessageHandler,
     CustomRegexHandler,
 )
+pyro_session = os.environ.get('SESSION')
+
 musicbot = Client(
-    SESSION=os.environ.get('SESSION'),
+    pyro_session,
     api_id=os.environ.get('API_ID'),
     api_hash=os.environ['API_HASH'],
 )
