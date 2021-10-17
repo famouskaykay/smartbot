@@ -29,12 +29,10 @@ spamwatch
 alphabet_detector
 pyrate-limiter
 cachetools
-tgcrypto
 youtube_dl
 pafy
 pytube
 youtube-search-python
-asyncio
 pytgcalls==3.0.0.dev19
 git+https://github.com/pyrogram/pyrogram@master
 pyrogram>=1.0.7
