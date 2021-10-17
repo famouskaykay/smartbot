@@ -3,7 +3,7 @@ redis
 emoji
 lxml
 
-tgcrypto
+
 requests
 aiohttp[speedups]
 bs4
