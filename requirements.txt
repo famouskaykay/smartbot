@@ -2,6 +2,15 @@ future
 redis
 emoji
 lxml
+
+tgcrypto
+requests
+aiohttp[speedups]
+bs4
+pymongo
+dnspython
+speedtest-cli
+
 beautifulsoup4
 requests
 sqlalchemy==1.3.20
