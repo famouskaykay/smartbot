@@ -4,8 +4,10 @@ import sys
 import time
 import spamwatch
 import telegram.ext as tg
-from pyrogram import Client, errors
+from pyrogram import Client, errors, filters
 from telethon import TelegramClient
+from redis import Redis
+
 
 StartTime = time.time()
 CMD_HELP = {}
