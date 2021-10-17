@@ -108,3 +108,15 @@ async def skip_vc(client, message):
     elif resp['status'] == 'play':
         await message.reply_photo(resp['thumb'], caption=resp['msg'])
     
+    
+@group_call.on_playout_ended
+async def playout_ended_check(gc, source, media_type):
+    if len(music_queue) == 0: return
+    if source == music_queue[0]['LOCAL_FILE']:
+        os.remove(source)
+        music_queue.pop(0)
+    resp = await play_or_queue("check")
+    if resp['status'] == 'empty':
+        await Client.send_message(SUPPORT_CHAT=SUPPORT_CHAT, text=resp['msg'])
+    elif resp['status'] == 'play':
+        await Client.send_photo(SUPPORT_CHAT=SUPPORT_CHAT, photo=resp['thumb'], caption=resp['msg'])
