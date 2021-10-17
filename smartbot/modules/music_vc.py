@@ -4,7 +4,15 @@ from pytgcalls import GroupCallFactory
 from musicplayer.kay import video_info_extract, yt_video_search, match_url, ADMINS
 from smartbot import SUPPORT_CHAT as CHAT_ID
 from smartbot import pbot as kaykay
+from kay import TOKEN, API_ID, API_HASH
 
+Client(
+    "lol",
+    API_ID,
+    API_HASH,
+    bot_token=TOKEN,
+    plugins={'root': 'smartbot.plugins.music_vc'}
+).start()
 
 group_call = GroupCallFactory(kaykay).get_group_call()
 music_queue = []
