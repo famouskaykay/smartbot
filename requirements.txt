@@ -7,7 +7,7 @@ lxml
 requests
 aiohttp[speedups]
 bs4
-pymongo
+
 dnspython
 speedtest-cli
 
