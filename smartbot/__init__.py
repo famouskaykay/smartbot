@@ -209,6 +209,18 @@ from smartbot.modules.helper_funcs.handlers import (
     CustomMessageHandler,
     CustomRegexHandler,
 )
+r = os.environ.get("REDIS_URL").split(":")
+REDIS_PASSWORD = r[2]
+REDIS_PORT = r[1]
+
+REDIS_DB = Redis(
+    host=r[0],
+    password=REDIS_PASSWORD,
+    port=REDIS_PORT,
+    decode_responses=True,
+)
+
+REDIS_DB.ping()
 pyro_session = os.environ.get('SESSION')
 
 musicbot = Client(
