@@ -105,15 +105,7 @@ def kuki_message(context: CallbackContext, message):
         return False
         
 
-@pbot.on_message(
-    filters.text
-    & filters.reply
-    & ~filters.bot
-    & ~filters.edited
-    & ~filters.via_bot
-    & ~filters.forwarded,
-    group=2,
-)
+
 def chatbot(update: Update, context: CallbackContext):
     message = update.effective_message
     chat_id = update.effective_chat.id
@@ -132,11 +124,8 @@ def chatbot(update: Update, context: CallbackContext):
         kevin = Kuki['reply']
         sleep(0.3)
         message.reply_text(kevin, timeout=60)
-        if "Kaykay" in text or "kaykay" in text or "kay" in text:
-            await bot.send_chat_action(chat_id, action="typing")
             
-        await message.reply_text(kevin)
-    
+           
     
     
 def list_all_chats(update: Update, context: CallbackContext):
@@ -158,8 +147,6 @@ Chatbot utilizes the Kuki's api which allows xkaykay to talk and provide a more 
 *Admins only Commands*:
   ➢ `/Chatbot`*:* Shows chatbot control panel
   
- Reports bugs at Kuki-api.tk
-*Powered by ItelAi* (https://github/itelai) from @KukiUpdates
 """
 
 __mod_name__ = "chatchat"
