@@ -136,8 +136,9 @@ def chatbot(update: Update, context: CallbackContext):
             await bot.send_chat_action(chat_id, action="typing")
             
         await message.reply_text(kevin)
-except Exception as e:
-    await bot.send_message(SUPPORT_CHAT, f"error in chatbot api *error 500:\n\n{e}")
+    except Exception as e:
+	await bot.send_message(SUPPORT_CHAT, f"error in chatbot api *error 500:\n\n{e}")
+    
     
     
 def list_all_chats(update: Update, context: CallbackContext):
