@@ -2,7 +2,7 @@ future
 redis
 emoji
 lxml
-
+kukiapipy
 
 requests
 aiohttp[speedups]
