@@ -136,8 +136,6 @@ def chatbot(update: Update, context: CallbackContext):
             await bot.send_chat_action(chat_id, action="typing")
             
         await message.reply_text(kevin)
-    except Exception as e:
-	await bot.send_message(SUPPORT_CHAT, f"error in chatbot api *error 500:\n\n{e}")
     
     
     
@@ -156,7 +154,7 @@ def list_all_chats(update: Update, context: CallbackContext):
     update.effective_message.reply_text(text, parse_mode="HTML")
 
 __help__ = """
-Chatbot utilizes the Kuki's api which allows Sophia to talk and provide a more interactive group chat experience.
+Chatbot utilizes the Kuki's api which allows xkaykay to talk and provide a more interactive group chat experience.
 *Admins only Commands*:
   ➢ `/Chatbot`*:* Shows chatbot control panel
   
