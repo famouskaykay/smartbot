@@ -141,7 +141,7 @@ def chatbot(update: Update, context: CallbackContext):
         Message = message.text
         bot.send_chat_action(chat_id, action="typing")
         aibot = kuki.chatbot(key='@kukiaichat contant get key', name='prnav', owner='moezilla', msg=+'Message'
-        sleep(0.3)
+        
         message.reply_text(aibot, timeout=60)
 	 
 
