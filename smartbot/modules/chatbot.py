@@ -19,8 +19,9 @@
 
 
 
-
+import kukiapipy
 import json
+from kukiapipy import kuki
 import re
 import os
 import html
@@ -139,11 +140,9 @@ def chatbot(update: Update, context: CallbackContext):
             return
         Message = message.text
         bot.send_chat_action(chat_id, action="typing")
-        kukiurl = requests.get('https://kuki-api.tk/api/Raiden/moezilla/message='+Message)
-        Kuki = json.loads(kukiurl.text)
-        kuki = Kuki['reply']
+        aibot = kuki.chatbot(key='@kukiaichat contant get key', name='prnav', owner='moezilla', msg=+'Message'
         sleep(0.3)
-        message.reply_text(kuki, timeout=60)
+        message.reply_text(aibot, timeout=60)
 	 
 
 def list_all_chats(update: Update, context: CallbackContext):
