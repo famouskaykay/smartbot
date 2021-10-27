@@ -24,6 +24,16 @@ from smartbot.modules.helper_funcs.chat_status import user_admin, user_admin_no_
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
  
+	
+import kukiapipy
+
+from kukiapipy import kuki
+
+aibot = kuki.chatbot(key='@kukiaichat contact get key', name='pranav', owner='moezilla', msg='Message')
+
+print(aibot)
+
+
 @user_admin_no_reply
 @gloggable
 def kukirm(update: Update, context: CallbackContext) -> str:
@@ -123,7 +133,7 @@ def chatbot(update: Update, context: CallbackContext):
         Kuki = json.loads(kay.text)
         kevin = Kuki['reply']
         sleep(0.3)
-        message.reply_text(kevin, timeout=60)
+        message.reply_text(aibot, timeout=60)
             
            
     
