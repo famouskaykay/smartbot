@@ -29,7 +29,7 @@ import kukiapipy
 
 from kukiapipy import kuki
 
-aibot = kuki.chatbot(key='@kukiaichat contact get key', name='pranav', owner='moezilla', msg='Message')
+aibot = kuki.chatbot(key='@kukiaichat contact get key', name='pranav', owner='moezilla', msg=f'{Message}')
 
 print(aibot)
 
