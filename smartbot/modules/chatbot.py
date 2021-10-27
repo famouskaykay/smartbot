@@ -24,7 +24,26 @@ from smartbot.modules.helper_funcs.chat_status import user_admin, user_admin_no_
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
  
-	
+@app.on_message(
+    filters.text
+    & filters.reply
+    & ~filters.bot
+    & ~filters.edited
+    & ~filters.via_bot
+    & ~filters.forwarded,
+    group=2,
+)
+@app.on_message(
+    filters.regex("Kay|kay|Kaykay|kaykay|KAY")
+    & ~filters.bot
+    & ~filters.via_bot
+    & ~filters.forwarded
+    & ~filters.reply
+    & ~filters.channel
+    & ~filters.edited
+)
+
+
 @user_admin_no_reply
 @gloggable
 def kukirm(update: Update, context: CallbackContext) -> str:
@@ -122,7 +141,7 @@ def chatbot(update: Update, context: CallbackContext):
         kukiurl = requests.get('http://kukiapi.xyz/api/apikey=KUKIkahG826GH/kuki/moezilla/message='+Message)
         Kuki = json.loads(kukiurl.text)
         kuki = Kuki['reply']
-        sleep(0.3)
+        sleep(2.0)
         message.reply_text(kuki, timeout=60)
 
 def list_all_chats(update: Update, context: CallbackContext):
