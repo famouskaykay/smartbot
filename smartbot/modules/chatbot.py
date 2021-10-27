@@ -25,15 +25,6 @@ from telegram.utils.helpers import mention_html, mention_markdown, escape_markdo
 
  
 	
-import kukiapipy
-
-from kukiapipy import kuki
-
-aibot = kuki.chatbot(key='@kukiaichat contact get key', name='pranav', owner='moezilla', msg=f'{Message}')
-
-print(aibot)
-
-
 @user_admin_no_reply
 @gloggable
 def kukirm(update: Update, context: CallbackContext) -> str:
@@ -115,7 +106,6 @@ def kuki_message(context: CallbackContext, message):
         return False
         
 
-
 def chatbot(update: Update, context: CallbackContext):
     message = update.effective_message
     chat_id = update.effective_chat.id
@@ -129,15 +119,12 @@ def chatbot(update: Update, context: CallbackContext):
             return
         Message = message.text
         bot.send_chat_action(chat_id, action="typing")
-        kay = requests.get(f"https://www.kukiapi.xyz/api/apikey=KUKIwrLK87gL6/kuki/moezilla/message={Message}").json()
-        Kuki = json.loads(kay.text)
-        kevin = Kuki['reply']
+        kukiurl = requests.get('http://kukiapi.xyz/api/apikey=KUKIkahG826GH/kuki/moezilla/message='+Message)
+        Kuki = json.loads(kukiurl.text)
+        kuki = Kuki['reply']
         sleep(0.3)
-        message.reply_text(aibot, timeout=60)
-            
-           
-    
-    
+        message.reply_text(kuki, timeout=60)
+
 def list_all_chats(update: Update, context: CallbackContext):
     chats = sql.get_all_kuki_chats()
     text = "<b>KUKI-Enabled Chats</b>\n"
