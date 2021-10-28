@@ -23,27 +23,6 @@ from smartbot.modules.helper_funcs.chat_status import user_admin, user_admin_no_
 
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
- 
-@app.on_message(
-    filters.text
-    & filters.reply
-    & ~filters.bot
-    & ~filters.edited
-    & ~filters.via_bot
-    & ~filters.forwarded,
-    group=2,
-)
-@app.on_message(
-    filters.regex("Kay|kay|Kaykay|kaykay|KAY")
-    & ~filters.bot
-    & ~filters.via_bot
-    & ~filters.forwarded
-    & ~filters.reply
-    & ~filters.channel
-    & ~filters.edited
-)
-
-
 @user_admin_no_reply
 @gloggable
 def kukirm(update: Update, context: CallbackContext) -> str:
