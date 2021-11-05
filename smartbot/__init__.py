@@ -221,14 +221,8 @@ REDIS_DB = Redis(
     decode_responses=True,
 )
 
-REDIS_DB.ping()
-pyro_session = os.environ.get('SESSION')
 
-musicbot = Client(
-    pyro_session,
-    api_id=os.environ.get('API_ID'),
-    api_hash=os.environ['API_HASH'],
-)
+
 # make sure the regex handler can take extra kwargs
 tg.RegexHandler = CustomRegexHandler
 tg.CommandHandler = CustomCommandHandler
