@@ -93,7 +93,6 @@ if ENV:
     VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     REPOSITORY = os.environ.get("REPOSITORY", "")
-    REDIS_URL = os.environ.get("REDIS_URL")
     IBM_WATSON_CRED_URL = os.environ.get("IBM_WATSON_CRED_URL", None)
     IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
